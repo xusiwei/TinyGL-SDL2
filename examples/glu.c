@@ -3,6 +3,10 @@
 #include <GL/gl.h>
 #include "glu.h"
 
+#ifndef M_PI
+#  define M_PI 3.14159265
+#endif
+
 
 void drawTorus(float rc, int numc, float rt, int numt)
 {

@@ -1,6 +1,10 @@
 /*
  * tk like ui
  */
+#ifndef __UI_H__
+#define __UI_H__
+#include "GL/gl.h"
+
 void draw( void );
 void idle( void );
 GLenum key(int k, GLenum mask);
@@ -15,3 +19,4 @@ void tkSwapBuffers(void);
 #define KEY_RIGHT  0xe003
 #define KEY_ESCAPE 0xe004
 
+#endif // __UI_H__

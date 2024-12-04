@@ -61,7 +61,7 @@
 #define GLUT_KEY
 #define GLUT_SPEC
 #include <GL/gl.h>
-#include <GL/glx.h>
+// #include <GL/glx.h>
 #include "glu.h"
 #include "ui.h"
 

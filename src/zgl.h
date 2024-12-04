@@ -7,9 +7,14 @@
 #include <assert.h>
 #include <string.h>
 #include <GL/gl.h>
+
 #include "zbuffer.h"
 #include "zmath.h"
 #include "zfeatures.h"
+
+#ifndef M_PI
+#define M_PI 3.14159265
+#endif
 
 #define DEBUG
 /* #define NDEBUG */
@@ -337,8 +342,13 @@ void dprintf(const char *, ...);
 
 #ifdef DEBUG
 
+#ifdef _MSC_VER
+#define dprintf(format, ...) \
+  fprintf(stderr,"In '%s': " format "\n", __FUNCTION__, ##__VA_ARGS__)
+#else
 #define dprintf(format, args...)  \
   fprintf(stderr,"In '%s': " format "\n",__FUNCTION__, ##args);
+#endif
 
 #else
 
